@@ -1,4 +1,4 @@
-// useful if there are a lot of values and the values are in a smaller range
+// useful if there are a lot of values that are in small range
 #include <iostream>
 using namespace std;
 
