@@ -2,23 +2,25 @@
 #include <vector>
 #include <algorithm>
 
-constexpr int MAX = 100'000;
+namespace {
+	constexpr int MAX = 100'000;
 
-struct event {
-	int x;
-	int type; // 1 for opening of segment, -1 for closing, 0 for point
-	int idx;
+	struct event {
+		int x;
+		int type; // 1 for opening of segment, -1 for closing, 0 for point
+		int idx;
 
-	bool operator<(const event& other) {
-		if (x == other.x) return type > other.type;
-		else return x < other.x;
-	}
-};
+		bool operator<(const event& other) {
+			if (x == other.x) return type > other.type;
+			else return x < other.x;
+		}
+	};
 
-int n, m, x1, x2, res[MAX];
-std::vector<event> events;
+	int n, m, x1, x2, res[MAX];
+	std::vector<event> events;
+}
 
-int main() {
+void points() {
 	std::cin >> n >> m;
 	for (int i = 0; i < n; i++) {
 		std::cin >> x1 >> x2;

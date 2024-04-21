@@ -2,11 +2,13 @@
 #include <utility>
 using namespace std;
 
-const int SIZE = 120;
-int n;
-int arr[SIZE];
+namespace {
+	const int SIZE = 120;
+	int n;
+	int arr[SIZE];
+}
 
-int main() {
+void insertionSort() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);

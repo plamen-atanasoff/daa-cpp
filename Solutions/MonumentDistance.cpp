@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
-const int SIZE = 300'000;
-long long n, r, i, j, cnt;
-long long arr[SIZE];
+namespace {
+	const int SIZE = 300'000;
+	long long n, r, i, j, cnt;
+	long long arr[SIZE];
+}
 
-int main() {
+void monumentDistance() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
