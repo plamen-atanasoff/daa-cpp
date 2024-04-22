@@ -2,7 +2,9 @@
 #include <iomanip>
 using namespace std;
 
-double x, l, r, mid;
+namespace {
+	double x, l, r, mid;
+}
 
 void cubeRoot() {
 	cin >> x;
