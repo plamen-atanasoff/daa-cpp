@@ -20,7 +20,7 @@ void dFSRec(int node) {
 	}
 }
 
-int main() {
+void dFS() {
 	cin >> n >> m;
 	int u, v;
 	for (int i = 1; i <= m; i++) {
