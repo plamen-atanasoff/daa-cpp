@@ -19,7 +19,7 @@ void DFS(int x, int y) {
 	}
 }
 
-int main() {
+void viruses() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
