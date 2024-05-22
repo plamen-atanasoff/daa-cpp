@@ -137,8 +137,6 @@ void test() {
 
 	initToposort();
 	vector<int> res = toposort();
-
-
 }
 
 // BFS and DFS example:
