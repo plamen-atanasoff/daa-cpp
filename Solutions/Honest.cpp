@@ -43,7 +43,7 @@ size_t getCount() {
 	return hCtr < currVisited.size() / 2 ? currVisited.size() - hCtr : hCtr;
 }
 
-int main() {
+void honest() {
 	cin >> n >> m;
 	char c;
 	int x, y;
