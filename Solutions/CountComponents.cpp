@@ -12,7 +12,7 @@ int find(int x) {
 		return x;
 	}
 
-	return find(arr[x]);
+	return arr[x] = find(arr[x]);
 }
 
 void myUnion(int x, int y, int& ccount) {
@@ -22,13 +22,12 @@ void myUnion(int x, int y, int& ccount) {
 
 	ccount--;
 
-	if (s[rX] <= s[rY]) {
+	if (s[rX] < s[rY]) {
 		arr[rX] = rY;
-		s[rX] += 1;
 	}
 	else {
 		arr[rY] = rX;
-		s[rY] += 1;
+		if (s[rX] == s[rY]) s[rX]++;
 	}
 }
 

@@ -23,6 +23,7 @@ void viruses() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
+
 	cin >> n >> m >> k;
 	int x, y;
 	for (int i = 1; i <= k; i++) {

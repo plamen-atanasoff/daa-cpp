@@ -30,7 +30,7 @@ static int find(int node) {
 		return node;
 	}
 
-	return find(nodesRoots[node]);
+	return nodesRoots[node] = find(nodesRoots[node]);
 }
 
 static bool myUnion(int n1, int n2) {
@@ -38,15 +38,12 @@ static bool myUnion(int n1, int n2) {
 	int r2 = find(n2);
 	if (r1 == r2) return false;
 
-	if (nodesComponentsDepth[r1] > nodesComponentsDepth[r2]) {
-		nodesRoots[r2] = r1;
-	}
-	else if (nodesComponentsDepth[r1] < nodesComponentsDepth[r2]) {
+	if (nodesComponentsDepth[r1] < nodesComponentsDepth[r2]) {
 		nodesRoots[r1] = r2;
 	}
 	else {
 		nodesRoots[r2] = r1;
-		nodesComponentsDepth[r1]++;
+		if (nodesComponentsDepth[r1] == nodesComponentsDepth[r2]) nodesComponentsDepth[r1]++;
 	}
 
 	return true;
